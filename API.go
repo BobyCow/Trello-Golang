@@ -70,9 +70,9 @@ func Home(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "\t-> /api/get_task_by_id/{id} (GET)\n")
 	fmt.Fprintf(w, "\t-> /api/get_task/{filter}/{value} (GET)\n")
 	fmt.Fprintf(w, "\t-> /api/get_tasks_by_duration/{duration} (GET)\n")
-	fmt.Fprintf(w, "\t-> /api/create_task (POST)\n")
+	fmt.Fprintf(w, "\t-> /api/create_task (POST)\n\t\t- start (String)\n\t\t- end (String)\n\t\t- duration (String)\n\t\t- name (String)\n\t\t- description (String)\n\t\t- completed (Bool)\n")
 	fmt.Fprintf(w, "\t-> /api/delete_task/{id} (DELETE)\n")
-	fmt.Fprintf(w, "\t-> /api/update_task/{id} (PUT)\n")
+	fmt.Fprintf(w, "\t-> /api/update_task/{id} (PUT)\n\t\t- Same body as '/api/create_task'")
 }
 
 func Get_all_tasks(w http.ResponseWriter, r *http.Request) {
